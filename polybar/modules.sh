@@ -23,7 +23,6 @@ if [ "$1" = "--mic" ]; then
 
     # Convert the volume to percentage
     mic_percentage=$(awk -v volume="$mic_volume" 'BEGIN {split(volume, a, "%"); print a[1]}')
-
     # Check the microphone status and set the output accordingly
     if [ "$mic_status" = "yes" ]; then
         echo " muted"
